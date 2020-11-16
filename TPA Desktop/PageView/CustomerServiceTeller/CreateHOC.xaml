@@ -1,0 +1,79 @@
+﻿<Page x:Class="TPA_Desktop.PageView.CustomerServiceTeller.CreateHOC"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.CustomerServiceTeller"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="CreateHOC"  Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Create HOC" VerticalAlignment="Top" Height="41" Width="831" FontWeight="Bold" FontSize="24" TextAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="53,110,0,0" TextWrapping="Wrap" Text="Input Customer ID" VerticalAlignment="Top" Width="205" Height="34" FontSize="22" FontWeight="Bold"/>
+        <TextBox Name="txtCustomerID" HorizontalAlignment="Left" Height="23" Margin="53,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205"/>
+        <Button Content="Verify" HorizontalAlignment="Left" Margin="84,197,0,0" VerticalAlignment="Top" Width="143" Height="37" FontSize="16" FontWeight="Bold" Click="Button_Verify"/>
+
+        <TextBlock Name="Hidden1" HorizontalAlignment="Left" Margin="33,284,0,0" TextWrapping="Wrap" Text="Input Gross Income Document ID" VerticalAlignment="Top" Width="253" Height="36" FontSize="16" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox Name="txtGrossIncomeDocument" HorizontalAlignment="Left" Height="23" Margin="53,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Visibility="Hidden"/>
+
+        <TextBlock Name="Hidden2" HorizontalAlignment="Left" Margin="81,372,0,0" TextWrapping="Wrap" Text="Input HOC Types" VerticalAlignment="Top" Width="146" Height="28" FontSize="18" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox Name="txtHOCType" HorizontalAlignment="Left" Height="23" Margin="53,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Visibility="Hidden"/>
+
+        <Button Name="Hidden3" Content="Create" HorizontalAlignment="Left" Margin="84,466,0,0" VerticalAlignment="Top" Width="143" Height="34" FontSize="16" FontWeight="Bold" Click="Button_Create" Visibility="Hidden"/>
+
+        <DataGrid Name="DGHOC" AutoGenerateColumns="False" Margin="300,56,10.2,10.4">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="HOCID"
+                Binding="{Binding HOCID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="customerAccountID"
+                Binding="{Binding customerAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="grossIncomeDocumentID"
+                Binding="{Binding grossIncomeDocumentID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="HOCTypes"
+                Binding="{Binding HOCTypes, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+    </Grid>
+</Page>

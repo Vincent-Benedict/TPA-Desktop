@@ -1,0 +1,35 @@
+﻿<Window x:Class="TPA_Desktop.View.HumanResourceManagementTeamView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPA_Desktop.View"
+        mc:Ignorable="d"
+        Title="HumanResourceManagementTeamView" Height="650" Width="1050" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Rectangle Fill="#FF323232" HorizontalAlignment="Left" Height="620" Stroke="Black" VerticalAlignment="Top" Width="194"/>
+
+        <Rectangle Fill="#FF00B022" HorizontalAlignment="Left" Height="10" Margin="194,0,0,0" VerticalAlignment="Top" Width="849"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,15,0,0" TextWrapping="Wrap" Text="Human Resource Management Team" VerticalAlignment="Top" Height="52" Width="194" FontWeight="Bold" FontSize="18" TextAlignment="Center" Foreground="White"/>
+
+        <Button Content="Home" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Home"/>
+        <Button Content="Employee Data" HorizontalAlignment="Left" Margin="0,133,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Employee_Data"/>
+        <Button Content="Employee Resignation" HorizontalAlignment="Left" Margin="0,187,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
+        <Button Content="Position Announcement" HorizontalAlignment="Left" Margin="0,238,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Position"/>
+        <Button Content="Request the Firing" HorizontalAlignment="Left" Margin="0,289,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
+        <Button Content="Salary Raised" HorizontalAlignment="Left" Margin="0,339,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
+        <Button Content="Employee Leaving Permit" HorizontalAlignment="Left" Margin="0,389,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
+        <Button Content="Employee Recruitement" HorizontalAlignment="Left" Margin="0,438,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Employee_Recruitment"/>
+
+        <Button Content="LogOut" HorizontalAlignment="Left" Margin="33,557,0,0" VerticalAlignment="Top" Width="126" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_LogOut"/>
+
+        <!--Frame View-->
+        <Frame x:Name="pageHRMTeam" Margin="194,10,-1.8,0" Background="White" NavigationUIVisibility="Hidden"/>
+        
+        <Button Content="Request Broken Item" HorizontalAlignment="Left" Margin="0,487,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Request"/>
+
+
+
+    </Grid>
+</Window>

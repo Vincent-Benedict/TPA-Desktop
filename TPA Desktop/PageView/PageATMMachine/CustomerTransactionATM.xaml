@@ -1,0 +1,80 @@
+﻿<Page x:Class="TPA_Desktop.PageView.PageATMMachine.CustomerTransactionATM"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.PageATMMachine"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="CustomerTransactionATM" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="831" FontSize="24" FontWeight="Bold" TextAlignment="Center"><Run Text="Check Latest "/><Run Text="Transaction"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="54,122,0,0" TextWrapping="Wrap" Text="Input your Customer ID" VerticalAlignment="Top" Height="29" Width="196" TextAlignment="Center" FontSize="14" FontWeight="Bold"/>
+        <TextBox Name="customerID" HorizontalAlignment="Left" Height="27" Margin="54,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+        <Button Content="Check Latest Transaction" HorizontalAlignment="Left" Margin="54,229,0,0" VerticalAlignment="Top" Width="196" Height="47" Background="#FF00D6FF" FontSize="14" FontWeight="Bold" Click="Button_Check_ATM"/>
+        <DataGrid Name="DgUsers" Margin="271,51,10.2,10.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="Customer Account ID"
+                Binding="{Binding customerAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Name ID"
+                Binding="{Binding customerAccountName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Balance Inquiry"
+                Binding="{Binding transactionDate, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Account Type"
+                Binding="{Binding transaction, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Amount Money"
+                Binding="{Binding amountMoney, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+    </Grid>
+</Page>

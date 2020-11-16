@@ -1,0 +1,76 @@
+﻿<Page x:Class="TPA_Desktop.PageView.CustomerServiceTeller.CreditCardSlip"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.CustomerServiceTeller"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="CreditCardSlip">
+
+    <Grid Background="White">
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Payment Slip of Credit Card" VerticalAlignment="Top" Height="40" Width="831" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="32,93,0,0" TextWrapping="Wrap" Text="Input Credit Card ID" VerticalAlignment="Top" Height="28" Width="188" FontWeight="Bold" FontSize="18"/>
+        <TextBox Name="txtCreditCardID" HorizontalAlignment="Left" Height="23" Margin="32,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <Button Content="Generate Transaction" HorizontalAlignment="Left" Margin="32,168,0,0" VerticalAlignment="Top" Width="188" Height="37" FontWeight="Bold" Click="Button_Generate"/>
+
+        <DataGrid Name="CCTransaction"  Margin="239,55,10.2,10.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn
+                Header="Credit Card Payments ID"
+                Binding="{Binding creditCardPaymentsID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+
+                <DataGridTextColumn
+                Header="Credit Card ID"
+                Binding="{Binding creditCardID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="creditCardDetail"
+                Binding="{Binding creditCardDetail, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="creditCardPaymentsBill"
+                Binding="{Binding creditCardPaymentsBill, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+
+
+        </DataGrid>
+        
+        
+        
+    </Grid>
+</Page>

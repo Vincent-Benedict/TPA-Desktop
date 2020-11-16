@@ -1,0 +1,16 @@
+﻿<Page x:Class="TPA_Desktop.PageView.HumanResourceManagementTeam.HRMHome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.HumanResourceManagementTeam"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="HRMHome"  Background="White">
+
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Width="851" FontSize="42" FontWeight="Bold" TextAlignment="Center" LineHeight="24" Margin="0,234,0.2,234.4"><Run Text="Welcome"/><LineBreak/><Run Text="Human Resource Management Team"/></TextBlock>
+
+
+    </Grid>
+</Page>

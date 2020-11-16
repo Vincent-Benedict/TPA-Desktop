@@ -1,0 +1,43 @@
+﻿<Window x:Class="TPA_Desktop.View.TellerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPA_Desktop.View"
+        mc:Ignorable="d"
+        Title="TellerView" Height="650" Width="1050" WindowStartupLocation="CenterScreen">
+    <Grid Background="White">
+        <Rectangle Fill="#FF323232" HorizontalAlignment="Left" Height="620" Stroke="Black" VerticalAlignment="Top" Width="194"/>
+
+        <!--Judul-->
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="112" Height="47" Margin="42,7,0,0" TextAlignment="Center" FontWeight="Bold" FontSize="16"><Run Text="Teller Service"/><LineBreak/><Run Text="Kong Bu Bank"/></TextBlock>
+        <!--Home Button-->
+        <Button Content="Home" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Width="194" Height="37" Background="#FF009683" Foreground="White" FontWeight="Bold" Click="Button_Home"/>
+        <!--Deposit Money Button-->
+        <Button Content="Deposit Money" HorizontalAlignment="Left" Margin="0,127,0,0" VerticalAlignment="Top" Width="194" Height="37" Background="#FF009683" Foreground="White" FontWeight="Bold" Click="Button_Deposit"/>
+        <!--Transfer Money Button-->
+        <Button Content="Transfer Money" HorizontalAlignment="Left" Margin="0,181,0,0" VerticalAlignment="Top" Width="194" Height="37" Background="#FF009683" Foreground="White" FontWeight="Bold" Click="Button_Transfer"/>
+        <!--Payments-->
+        <Button Content="Payments" HorizontalAlignment="Left" Margin="0,236,0,0" VerticalAlignment="Top" Width="194" Height="37" Background="#FF009683" Foreground="White" FontWeight="Bold" Click="Button_Payments"/>
+
+        <!--Withdrawl-->
+        <Button Content="Withdrawl" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" Background="#FF009683" Foreground="White" Click="Button_Withdrawl"/>
+
+
+
+        <Rectangle Fill="#FF009683" HorizontalAlignment="Left" Height="10" Margin="194,0,0,0" VerticalAlignment="Top" Width="849"/>
+
+
+
+
+
+        <!--Frame View-->
+        <Frame x:Name="pageTeller" Margin="194,10,-1.8,0" Background="White" NavigationUIVisibility="Hidden"/>
+
+
+        <Button Content="Log Out" HorizontalAlignment="Left" Margin="57,566,0,0" VerticalAlignment="Top" Width="75" Height="25" Background="#FF009683" FontWeight="Bold" Foreground="White" Click="Button_LogOut" />
+
+        <Button Content="Request Broken Item" HorizontalAlignment="Left" Margin="0,352,0,0" VerticalAlignment="Top" Width="194" Height="40" Background="#FF009683" Foreground="White" FontWeight="Bold" Click="Button_Request" />
+
+    </Grid>
+</Window>

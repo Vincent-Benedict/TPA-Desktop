@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPA_Desktop"
+        xmlns:View="clr-namespace:TPA_Desktop.View" x:Class="TPA_Desktop.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF009683">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="283" Margin="210,60,0,0" VerticalAlignment="Top" Width="381" CornerRadius="30" Background="#FFF6F6F6">
+            <TextBlock TextWrapping="Wrap" Text="Kong Bu Bank" Margin="-0.8,9.2,-1,242.4" FontSize="20" TextAlignment="Center" FontWeight="Bold" Foreground="#FF00B094"/>
+        </Border>
+        
+        <!--EmployeeID--> 
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Employee ID" VerticalAlignment="Top" Margin="248,148,0,0" Height="24" Width="104" FontSize="16" Foreground="#FF00B094" FontWeight="Bold"/>
+        <TextBox Name="txtEmployeeID" HorizontalAlignment="Left" Height="23" Margin="371,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184"/>
+        
+        <!--Password-->
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Margin="248,197,0,0" Height="24" Width="104" FontSize="16" Foreground="#FF00B094" FontWeight="Bold"/>
+        <PasswordBox Name="txtPassword"  HorizontalAlignment="Left" VerticalAlignment="Top" Background="White" Margin="371,197,0,0" Width="184" Height="24"/>
+        
+        <!--Login Button-->
+        <Button Content="Login" HorizontalAlignment="Left" Margin="316,253,0,0" VerticalAlignment="Top" Width="172" Height="30" Foreground="White" Background="#FF009C88" BorderBrush="#FF009C88" Click="Login_Button"/>
+        
+    </Grid>
+</Window>

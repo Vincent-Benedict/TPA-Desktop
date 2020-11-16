@@ -1,0 +1,73 @@
+﻿<Page x:Class="TPA_Desktop.PageView.PageTeller.WithdrawlMoney"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.PageTeller"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="WithdrawlMoney" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Withdrawl Money" VerticalAlignment="Top" Height="46" Width="831" FontSize="36" FontWeight="Bold" TextAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="60,111,0,0" TextWrapping="Wrap" Text="Input Customer ID" VerticalAlignment="Top" Height="32" Width="161" FontSize="18" FontWeight="Bold"/>
+        <TextBox Name="txtCustomerID" HorizontalAlignment="Left" Height="31" Margin="60,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197"/>
+        <Button Content="Verify Account" HorizontalAlignment="Left" Margin="85,201,0,0" VerticalAlignment="Top" Width="136" Height="36" Background="#FF00FFBA" FontSize="16" FontWeight="Bold" Click="Button_Verify_Account"/>
+
+        <TextBlock Name="Hidden1" HorizontalAlignment="Left" Margin="46,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="211" Text="Input Amount of Money" FontSize="18" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox Name="Hidden2"  HorizontalAlignment="Left" Height="34" Margin="60,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" Visibility="Hidden"/>
+        <Button Name="Hidden3" Content="Withdrawl" HorizontalAlignment="Left" Margin="85,403,0,0" VerticalAlignment="Top" Width="136" Height="38" Background="#FF00FF96" FontWeight="Bold" FontSize="16" Click="Button_Withdrawl" Visibility="Hidden"/>
+
+        <DataGrid Name ="DgUsers" Margin="275,78,10.2,10.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="Customer Account ID"
+                Binding="{Binding customerAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Name ID"
+                Binding="{Binding customerAccountName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Balance Inquiry"
+                Binding="{Binding customerAccountBalanceInquiry, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+
+
+
+
+
+        </DataGrid>
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>

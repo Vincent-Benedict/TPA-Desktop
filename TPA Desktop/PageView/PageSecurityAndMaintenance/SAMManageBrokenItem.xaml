@@ -1,0 +1,88 @@
+﻿<Page x:Class="TPA_Desktop.PageView.PageSecurityAndMaintenance.SAMManageBrokenItem"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.PageSecurityAndMaintenance"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="SAMManageBrokenItem"  Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Manage Broken Item" VerticalAlignment="Top" Height="35" Width="831" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="61,72,0,0" TextWrapping="Wrap" Text="Insert Broken Item" VerticalAlignment="Top" Height="25" Width="160" FontWeight="Bold" FontSize="18"/>
+        <TextBox Name="txtBrokenItem" HorizontalAlignment="Left" Height="23" Margin="61,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <TextBlock HorizontalAlignment="Left" Margin="61,148,0,0" TextWrapping="Wrap" Text="Insert Location" VerticalAlignment="Top" Height="25" Width="160" FontWeight="Bold" FontSize="18"/>
+        <TextBox Name="txtLocation" HorizontalAlignment="Left" Height="23" Margin="61,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Button Content="Insert" HorizontalAlignment="Left" Margin="90,226,0,0" VerticalAlignment="Top" Width="94" Height="28" Click="Button_Insert"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="47,290,0,0" TextWrapping="Wrap" Text="Delete Broken Item List" VerticalAlignment="Top" Height="29" Width="181" FontWeight="Bold" FontSize="16"/>
+        <TextBox Name="txtBrokenID" HorizontalAlignment="Left" Height="23" Margin="61,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="90,399,0,0" VerticalAlignment="Top" Width="94" Height="30" Click="Button_Delete"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="76,330,0,0" TextWrapping="Wrap" Text="Input Broken Item ID" VerticalAlignment="Top" Height="27" Width="126" FontWeight="Bold"/>
+
+        <DataGrid Name="DGBrokeItem" Margin="247,50,10.2,10.4" AutoGenerateColumns="False">
+
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="brokenItemID"
+                Binding="{Binding brokenItemID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="brokenItemName"
+                Binding="{Binding brokenItemName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="brokenItemLocation"
+                Binding="{Binding brokenItemLocation, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="brokenItemStatus"
+                Binding="{Binding brokenItemStatus, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+
+
+        </DataGrid>
+        
+
+
+
+
+
+
+    </Grid>
+</Page>

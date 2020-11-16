@@ -1,0 +1,143 @@
+﻿<Page x:Class="TPA_Desktop.PageView.CustomerServiceTeller.CreditCard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.CustomerServiceTeller"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="CreditCard" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Credit Card" VerticalAlignment="Top" Height="50" Width="851" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,75,0,0" TextWrapping="Wrap" Text="REQUEST" VerticalAlignment="Top" Height="27" Width="64" FontWeight="Bold"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="37,102,0,0" TextWrapping="Wrap" Text="Input Customer ID" VerticalAlignment="Top" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,133,0,0" TextWrapping="Wrap" Text="Input Family Card ID" VerticalAlignment="Top" Width="111"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,163,0,0" TextWrapping="Wrap" Text="Input Identity Card ID" VerticalAlignment="Top"/>
+
+        <TextBox Name="txtCustomerID" HorizontalAlignment="Left" Height="23" Margin="165,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtFamilyCardID" HorizontalAlignment="Left" Height="23" Margin="165,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtIdentityCardID" HorizontalAlignment="Left" Height="23" Margin="165,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Request" HorizontalAlignment="Left" Margin="37,203,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_request"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="37,293,0,0" TextWrapping="Wrap" Text="CREATE" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="37,330,0,0" TextWrapping="Wrap" Text="Input Credit Card Request ID" VerticalAlignment="Top" Width="123"/>
+        <TextBox Name="txtRequestCreditCardID" HorizontalAlignment="Left" Height="23" Margin="165,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="37,368,0,0" TextWrapping="Wrap" Text="Input Credit Card Type" VerticalAlignment="Top" Width="123"/>
+        <TextBox Name="txtCreditCardType" HorizontalAlignment="Left" Height="23" Margin="165,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Button Content="Create" HorizontalAlignment="Left" Margin="37,401,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Create"/>
+
+
+        <DataGrid Name="requestCreditCard" Margin="312,75,10.2,346.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="Customer Account ID"
+                Binding="{Binding customerAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="requestCreditCardID"
+                Binding="{Binding requestCreditCardID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="familyCardID"
+                Binding="{Binding familyCardID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="identityCardID"
+                Binding="{Binding identityCardID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Approved"
+                Binding="{Binding approve, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <DataGrid Name="creditCard" Margin="312,293,10.2,10.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="Customer Account ID"
+                Binding="{Binding customerAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="CreditCardID"
+                Binding="{Binding CreditCardID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="CreditCardType"
+                Binding="{Binding CreditCardType, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+
+
+
+        </DataGrid>
+
+
+
+    </Grid>
+</Page>

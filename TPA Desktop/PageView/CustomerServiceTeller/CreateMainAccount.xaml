@@ -1,0 +1,107 @@
+﻿<Page x:Class="TPA_Desktop.PageView.CustomerServiceTeller.CreateMainAccount"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.CustomerServiceTeller"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="CreateMainAccount">
+
+    <Grid Background="White">
+        <TextBlock HorizontalAlignment="Left" Margin="318,13,0,0" TextWrapping="Wrap" Text="Create Main Account" VerticalAlignment="Top" Height="20" Width="222" FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="36,77,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="37"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="136,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="36,120,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top"/>
+        <TextBox Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="136,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="36,161,0,0" TextWrapping="Wrap" Text="Phone Number" VerticalAlignment="Top"/>
+        <TextBox Name="txtPhoneNumber" HorizontalAlignment="Left" Height="23" Margin="136,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="36,200,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="80"/>
+        <TextBox Name="txtAddress" HorizontalAlignment="Left" Height="23" Margin="136,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="36,235,0,0" TextWrapping="Wrap" Text="Regular Account / Student Account / Business Account" VerticalAlignment="Top" Width="220" Height="32"/>
+        <TextBox Name="AccountType" HorizontalAlignment="Left" Height="23" Margin="36,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+
+        <Button Content="Next" HorizontalAlignment="Left" Margin="69,315,0,0" VerticalAlignment="Top" Width="135" Background="#FFFF8B8B" Height="29" FontWeight="Bold" Click="Button_Next"/>
+
+
+        <TextBlock Name="HiddenInitialDeposit" HorizontalAlignment="Left" Margin="36,384,0,0" TextWrapping="Wrap" Text="Initial Deposit" VerticalAlignment="Top" Width="95" Visibility="Hidden"/>
+        <TextBox Name="txtHiddenInitialDeposit" HorizontalAlignment="Left" Height="23" Margin="136,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBlock Name="HiddenLink" HorizontalAlignment="Left" Margin="36,424,0,0" TextWrapping="Wrap" Text="Link" VerticalAlignment="Top" Width="95" Visibility="Hidden"/>
+        <TextBox Name="txtHiddenLink" HorizontalAlignment="Left" Height="23" Margin="136,424,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+
+        <Button Name="buttonCreateAccount" Content="Create Account" HorizontalAlignment="Left" Margin="69,487,0,0" VerticalAlignment="Top" Width="135" Height="38" Background="#FFFF8B8B" FontWeight="Bold" Click="Button_Create_Account" Visibility="Hidden"/>
+
+        <DataGrid Name="DgUsers" Margin="283,38,10.2,10.4" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="Customer Account ID"
+                Binding="{Binding customerAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Name ID"
+                Binding="{Binding customerAccountName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Balance Inquiry"
+                Binding="{Binding customerAccountBalanceInquiry, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Account Type"
+                Binding="{Binding customerAccountType, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="Customer Link Account"
+                Binding="{Binding linkAccount, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+
+
+        </DataGrid>
+
+
+
+
+    </Grid>
+</Page>
