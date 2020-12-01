@@ -13,8 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ExcelLibrary.CompoundDocumentFormat;
-using ExcelLibrary.SpreadSheet;
 using TPA_Desktop.MVVM;
 using Microsoft.Office.Interop.Excel;
 
