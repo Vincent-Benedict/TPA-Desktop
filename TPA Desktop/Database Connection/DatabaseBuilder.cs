@@ -21,6 +21,89 @@ namespace TPA_Desktop.Database_Connection
 
         #region Validate
 
+
+        public int validateEmployeeID(String query, String employeeID)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+
+                count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
+
+        public int validateCreditCardTransaction(String query, String customerAccountID)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@customerAccountID", customerAccountID);
+
+                count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
+        public int validateCardInCreditCard(String query, String customerAccountID)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@customerAccountID", customerAccountID);
+
+                count = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
         public int validateEmployeeID(String query, String employeeID, String password)
         {
 
@@ -113,6 +196,123 @@ namespace TPA_Desktop.Database_Connection
 
 
         #region Insert
+
+        public void insertFiredEmployee(String query, String employeeID, String employeeName)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+                sqlCmd.Parameters.AddWithValue("@employeeName", employeeName);
+
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        public void insertRequestFiring(String query, String employeeID, String employeeName)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+                sqlCmd.Parameters.AddWithValue("@employeeName", employeeName);
+
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        public void insertEmployeeResignList(String query, String employeeID, String employeeName)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+                sqlCmd.Parameters.AddWithValue("@employeeName", employeeName);
+
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        public void insertRequestEmployeeSalary(String query, String employeeID, String employeeUpdatedMoney)
+        {
+
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+                sqlCmd.Parameters.AddWithValue("@employeeUpdatedMoney", employeeUpdatedMoney);
+
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+
+
+        }
+
+
+
+        public void insertRequestExpenses(String query, String requestExpensesID, String requestExpensesName, int requestExpensesMoney)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@requestExpensesID", requestExpensesID);
+                sqlCmd.Parameters.AddWithValue("@requestExpensesName", requestExpensesName);
+                sqlCmd.Parameters.AddWithValue("@requestExpensesMoney", requestExpensesMoney);
+
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
 
 
         public void insertEmployee(String query, String employeeID, String employeeName, String employeePassword, String employeeEmail, String employeePhoneNumber)
@@ -441,6 +641,144 @@ namespace TPA_Desktop.Database_Connection
 
         #region Update
 
+        public int updateFiringStatus(String query, String employeeID)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+
+                count = sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
+        public int updateRequestExpenses(String query, String requestExpensesID)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@requestExpensesID", requestExpensesID);
+
+                count = sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
+        public int updatePermitStatus(String query, int leavingPermitNumber)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@leavingPermitNumber", leavingPermitNumber);
+
+                count = sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
+        public int updateSalary(String query, String employeeID, int employeeSalary)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+                sqlCmd.Parameters.AddWithValue("@employeeSalary", employeeSalary);
+
+                count = sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
+        public int updateVirtualAccountBalanceInquiry(String query, String virtualAccountID, int amountOfMoney)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            int count = -1;
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@amountOfMoney", amountOfMoney);
+                sqlCmd.Parameters.AddWithValue("@virtualAccountID", virtualAccountID);
+
+                count = sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return count;
+        }
+
+
         public int updateRequestCreditCard(String query, String requestCreditCardID)
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -649,6 +987,31 @@ namespace TPA_Desktop.Database_Connection
 
         #region Delete
 
+       
+        public void deleteEmployee(String query, String employeeID)
+        {
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+            try
+            {
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.CommandType = CommandType.Text;
+                sqlCmd.Parameters.AddWithValue("@employeeID", employeeID);
+
+
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
         public void softDeleteNewEmployee(String query, String employeeCandidateID)
         {
             if (sqlCon.State == ConnectionState.Closed)
@@ -758,6 +1121,32 @@ namespace TPA_Desktop.Database_Connection
 
         #region View
 
+
+        public DataTable viewCustomerAccountDataSpecific(String query, String customerAccountID)
+        {
+            DataTable dt;
+
+            if (sqlCon.State == ConnectionState.Closed)
+            {
+                sqlCon.Open();
+            }
+
+
+
+            SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.Parameters.AddWithValue("@customerAccountID", customerAccountID);
+            dt = new DataTable();
+
+            SqlDataReader sdr = sqlCmd.ExecuteReader();
+            dt.Load(sdr);
+            sqlCon.Close();
+
+
+            return dt;
+        }
+
+
         public DataTable viewCustomerAccountData(String query)
         {
 
@@ -810,6 +1199,8 @@ namespace TPA_Desktop.Database_Connection
 
             return dt;
         }
+
+      
 
         public DataTable viewEmployeeData(String query, String employeeID)
         {

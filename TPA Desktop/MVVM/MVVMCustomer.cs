@@ -26,7 +26,6 @@ namespace TPA_Desktop.PageView.PageTeller
         public List<ModelCustomer> customers;
 
 
-
         public ModelViewCustomer()
         {
             customerModel = new ModelCustomer();

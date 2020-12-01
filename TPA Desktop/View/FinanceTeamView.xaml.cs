@@ -84,5 +84,33 @@ namespace TPA_Desktop.View
 
             pageFinance.Content = currentPage;
         }
+
+        private void Button_Expenses(object sender, RoutedEventArgs e)
+        {
+            currentPage = new ExpensesItemRepair();
+
+            pageFinance.Content = currentPage;
+        }
+
+        private void Button_Salary(object sender, RoutedEventArgs e)
+        {
+            currentPage = new EmployeeSalary();
+
+            pageFinance.Content = currentPage;
+        }
+
+        private void Button_RequestExpenses(object sender, RoutedEventArgs e)
+        {
+            currentPage = new BankRequestExpenses();
+
+            pageFinance.Content = currentPage;
+        }
+
+        private void Button_Income(object sender, RoutedEventArgs e)
+        {
+            currentPage = new IncomeRevenue();
+
+            pageFinance.Content = currentPage;
+        }
     }
 }

@@ -15,10 +15,12 @@
 
         <Button Content="Home" HorizontalAlignment="Left" Margin="0,85,0,0" VerticalAlignment="Top" Width="194" Height="36" Foreground="Black" BorderBrush="#FFD37900" Background="#FFD37900" FontWeight="Bold" FontSize="18" Click="Button_Home"/>
         <Button Content="Manage Broken Item" HorizontalAlignment="Left" Margin="0,141,0,0" VerticalAlignment="Top" Width="194" Height="44" Foreground="Black" BorderBrush="#FFD37900" Background="#FFD37900" FontWeight="Bold" FontSize="18" Click="Button_Manage"/>
+        <Button Content="Request Expenses" HorizontalAlignment="Left" Margin="0,205,0,0" VerticalAlignment="Top" Width="194" Height="40" Foreground="Black" BorderBrush="#FFD37900" Background="#FFD37900" FontWeight="Bold" FontSize="18" Click="Button_Request"/>
         <Button Content="LogOut" HorizontalAlignment="Left" Margin="50,537,0,0" VerticalAlignment="Top" Width="103" Height="44" Foreground="Black" BorderBrush="#FFD37900" Background="#FFD37900" FontWeight="Bold" FontSize="18" Click="Button_LogOut"/>
 
         <!--Frame View-->
         <Frame x:Name="pageSAMTeam" Margin="194,10,-1.8,0" Background="White" NavigationUIVisibility="Hidden"/>
+        
 
     </Grid>
 </Window>

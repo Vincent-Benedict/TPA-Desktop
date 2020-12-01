@@ -51,6 +51,7 @@ namespace TPA_Desktop.Facades
             {
                 viewMenu.setStrategyWindow(new ATMMachine());
             }
+            
         }
 
 

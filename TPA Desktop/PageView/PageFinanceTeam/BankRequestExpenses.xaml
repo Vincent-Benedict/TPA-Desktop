@@ -1,0 +1,31 @@
+﻿<Page x:Class="TPA_Desktop.PageView.PageFinanceTeam.BankRequestExpenses"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.PageFinanceTeam"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="BankRequestExpenses" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="All Bank Request Expenses" VerticalAlignment="Top" Height="31" Width="831" FontWeight="Bold" FontSize="20" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,99,0,0" TextWrapping="Wrap" Text="Input Request Expenses ID" VerticalAlignment="Top" Height="19" Width="190" FontWeight="Bold" FontSize="14"/>
+        <TextBox Name="txtRequestExpensesID" HorizontalAlignment="Left" Height="23" Margin="50,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+        <Button Content="Approve" HorizontalAlignment="Left" Margin="50,178,0,0" VerticalAlignment="Top" Width="80" Height="30" Click="Button_Approve"/>
+        <Button Content="Reject" HorizontalAlignment="Left" Margin="148,178,0,0" VerticalAlignment="Top" Width="92" Height="30" Click="Button_Reject"/>
+
+        <DataGrid Name="DGExpenses" Margin="255,46,10.2,10.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="requestExpensesID" Binding="{Binding requestExpensesID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+                <DataGridTextColumn Header="requestExpensesName" Binding="{Binding requestExpensesName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+                <DataGridTextColumn Header="requestExpensesMoney" Binding="{Binding requestExpensesMoney, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+                <DataGridTextColumn Header="requestExpensesStatus" Binding="{Binding requestExpensesStatus, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        
+        
+    </Grid>
+</Page>

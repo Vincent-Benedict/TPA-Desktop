@@ -71,6 +71,17 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
 
+                <DataGridTextColumn
+                Header="virtualAccountInquiry"
+                Binding="{Binding virtualAccountInquiry, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
             </DataGrid.Columns>
 
 

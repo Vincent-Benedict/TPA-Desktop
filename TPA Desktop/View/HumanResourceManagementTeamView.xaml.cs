@@ -68,5 +68,29 @@ namespace TPA_Desktop.View
             currentPage = new RequestBroken();
             pageHRMTeam.Content = currentPage;
         }
+
+        private void Button_Salary_Raised(object sender, RoutedEventArgs e)
+        {
+            currentPage = new HRMManageSalary();
+            pageHRMTeam.Content = currentPage;
+        }
+
+        private void Button_Resign(object sender, RoutedEventArgs e)
+        {
+            currentPage = new HRMEmployeeResign();
+            pageHRMTeam.Content = currentPage;
+        }
+
+        private void Button_Firing(object sender, RoutedEventArgs e)
+        {
+            currentPage = new HRMRequestFiring();
+            pageHRMTeam.Content = currentPage;
+        }
+
+        private void Button_Permit(object sender, RoutedEventArgs e)
+        {
+            currentPage = new HRMEmployeeLeavingPermit();
+            pageHRMTeam.Content = currentPage;
+        }
     }
 }

@@ -81,9 +81,11 @@
     <Compile Include="Database Connection\DatabaseBuilder.cs" />
     <Compile Include="Database Connection\DbConnection.cs" />
     <Compile Include="Facades\viewFacades.cs" />
+    <Compile Include="MVVM\CreditCardTransaction.cs" />
     <Compile Include="MVVM\CustomerAccount.cs" />
     <Compile Include="MVVM\CustomerDetail.cs" />
     <Compile Include="MVVM\MVVMAnnualRentalPrice.cs" />
+    <Compile Include="MVVM\MVVMBankRequestExpenses.cs" />
     <Compile Include="MVVM\MVVMBills.cs" />
     <Compile Include="MVVM\MVVMBrokenItem.cs" />
     <Compile Include="MVVM\MVVMCreditCard.cs" />
@@ -91,14 +93,22 @@
     <Compile Include="MVVM\MVVMCustomerDepositInterest.cs" />
     <Compile Include="MVVM\MVVMCustomerPaymentsBill.cs" />
     <Compile Include="MVVM\MVVMCustomerTransaction.cs" />
+    <Compile Include="MVVM\MVVMEmployeeFired.cs" />
+    <Compile Include="MVVM\MVVMEmployeeLeavingPermit.cs" />
+    <Compile Include="MVVM\MVVMEmployeeResign.cs" />
+    <Compile Include="MVVM\MVVMEmployeeSalary.cs" />
     <Compile Include="MVVM\MVVMHOC.cs" />
     <Compile Include="MVVM\MVVMLoans.cs" />
     <Compile Include="MVVM\MVVMNewEmployee.cs" />
+    <Compile Include="MVVM\MVVMRequestExpenses.cs" />
+    <Compile Include="MVVM\MVVMTrackIncomeRevenue.cs" />
     <Compile Include="MVVM\MVVMVirtualAccount.cs" />
     <Compile Include="MVVM\MVVPCreditCardPayments.cs" />
     <Compile Include="MVVM\MVVPEmployee.cs" />
+    <Compile Include="MVVM\MVVPEmployeeRequestFiring.cs" />
     <Compile Include="MVVM\MVVPQueue.cs" />
     <Compile Include="MVVM\MVVPRequestCreditCard.cs" />
+    <Compile Include="MVVM\RequestEmployeeSalary.cs" />
     <Compile Include="PageView\CustomerServiceTeller\BlockedAccount.xaml.cs">
       <DependentUpon>BlockedAccount.xaml</DependentUpon>
     </Compile>
@@ -141,8 +151,23 @@
     <Compile Include="PageView\HumanResourceManagementTeam\HRMEmployeeData.xaml.cs">
       <DependentUpon>HRMEmployeeData.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageView\HumanResourceManagementTeam\HRMEmployeeLeavingPermit.xaml.cs">
+      <DependentUpon>HRMEmployeeLeavingPermit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\HumanResourceManagementTeam\HRMEmployeeResign.xaml.cs">
+      <DependentUpon>HRMEmployeeResign.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageView\HumanResourceManagementTeam\HRMHome.xaml.cs">
       <DependentUpon>HRMHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\HumanResourceManagementTeam\HRMManageSalary.xaml.cs">
+      <DependentUpon>HRMManageSalary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\HumanResourceManagementTeam\HRMRequestFiring.xaml.cs">
+      <DependentUpon>HRMRequestFiring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageATMMachine\CreditCardTransactionATM.xaml.cs">
+      <DependentUpon>CreditCardTransactionATM.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageView\PageATMMachine\CustomerTransactionATM.xaml.cs">
       <DependentUpon>CustomerTransactionATM.xaml</DependentUpon>
@@ -159,6 +184,9 @@
     <Compile Include="PageView\PageATMMachine\TransferMoneyATM.xaml.cs">
       <DependentUpon>TransferMoneyATM.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageView\PageATMMachine\TransferToVirtualAccountATM.xaml.cs">
+      <DependentUpon>TransferToVirtualAccountATM.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageView\PageATMMachine\WithdrawlMoneyATM.xaml.cs">
       <DependentUpon>WithdrawlMoneyATM.xaml</DependentUpon>
     </Compile>
@@ -168,8 +196,17 @@
     <Compile Include="PageView\PageFinanceTeam\BankBills.xaml.cs">
       <DependentUpon>BankBills.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageView\PageFinanceTeam\BankRequestExpenses.xaml.cs">
+      <DependentUpon>BankRequestExpenses.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageView\PageFinanceTeam\CustomerDepositInterest.xaml.cs">
       <DependentUpon>CustomerDepositInterest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageFinanceTeam\EmployeeSalary.xaml.cs">
+      <DependentUpon>EmployeeSalary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageFinanceTeam\ExpensesItemRepair.xaml.cs">
+      <DependentUpon>ExpensesItemRepair.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageView\PageFinanceTeam\FinanceHome.xaml.cs">
       <DependentUpon>FinanceHome.xaml</DependentUpon>
@@ -177,8 +214,23 @@
     <Compile Include="PageView\PageFinanceTeam\HandleCreditCard.xaml.cs">
       <DependentUpon>HandleCreditCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageView\PageFinanceTeam\IncomeRevenue.xaml.cs">
+      <DependentUpon>IncomeRevenue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageManager\ExpensesRevenue.xaml.cs">
+      <DependentUpon>ExpensesRevenue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageManager\FireEmployee.xaml.cs">
+      <DependentUpon>FireEmployee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageView\PageManager\ManagerHome.xaml.cs">
       <DependentUpon>ManagerHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageManager\ResignationEmployee.xaml.cs">
+      <DependentUpon>ResignationEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageManager\ViewHumanResource.xaml.cs">
+      <DependentUpon>ViewHumanResource.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageView\PageManager\ViewTransaction.xaml.cs">
       <DependentUpon>ViewTransaction.xaml</DependentUpon>
@@ -194,6 +246,9 @@
     </Compile>
     <Compile Include="PageView\PageSecurityAndMaintenance\SAMManageBrokenItem.xaml.cs">
       <DependentUpon>SAMManageBrokenItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\PageSecurityAndMaintenance\SAMReqeustExpenses.xaml.cs">
+      <DependentUpon>SAMReqeustExpenses.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageView\PageTeller\DepositMoney.xaml.cs">
       <DependentUpon>DepositMoney.xaml</DependentUpon>
@@ -292,7 +347,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageView\HumanResourceManagementTeam\HRMEmployeeLeavingPermit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\HumanResourceManagementTeam\HRMEmployeeResign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageView\HumanResourceManagementTeam\HRMHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\HumanResourceManagementTeam\HRMManageSalary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\HumanResourceManagementTeam\HRMRequestFiring.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageATMMachine\CreditCardTransactionATM.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -316,6 +391,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageView\PageATMMachine\TransferToVirtualAccountATM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageView\PageATMMachine\WithdrawlMoneyATM.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -328,7 +407,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageView\PageFinanceTeam\BankRequestExpenses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageView\PageFinanceTeam\CustomerDepositInterest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageFinanceTeam\EmployeeSalary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageFinanceTeam\ExpensesItemRepair.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -340,7 +431,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageView\PageFinanceTeam\IncomeRevenue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageManager\ExpensesRevenue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageManager\FireEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageView\PageManager\ManagerHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageManager\ResignationEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageManager\ViewHumanResource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -361,6 +472,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageView\PageSecurityAndMaintenance\SAMManageBrokenItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\PageSecurityAndMaintenance\SAMReqeustExpenses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

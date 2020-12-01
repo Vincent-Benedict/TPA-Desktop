@@ -87,6 +87,23 @@ namespace TPA_Desktop.MVVM
         }
 
 
+        public int validateCardInCreditCard(String customerAccountID)
+        {
+            int x = -1;
+            x = requestCreditCard.validateCardInCreditCard(customerAccountID);
+            return x;
+        }
+
+        public int validateCreditCardTransaction(String customerAccountID)
+        {
+            int x = 0;
+            x = requestCreditCard.checkCreditCardTransaction(customerAccountID);
+            return x;
+        }
+
+
+
+
     }
 
 
@@ -137,6 +154,18 @@ namespace TPA_Desktop.MVVM
             return returnValue;
         }
 
+        public int validateCardInCreditCard(String customerAccountID) 
+        {
+            int returnValue = -1;
+
+            String query = "SELECT COUNT(1) FROM CreditCard WHERE customerAccountID = @customerAccountID";
+
+            returnValue = db.validateCardInCreditCard(query, customerAccountID);
+
+
+            return returnValue;
+        }
+
         public String grabData(String customerAccountID)
         {
             List<ModelCreditCard> temp = new List<ModelCreditCard>();
@@ -177,6 +206,16 @@ namespace TPA_Desktop.MVVM
 
         //    return customerTransactions;
         //}
+
+
+        public int checkCreditCardTransaction(String customerAccountID)
+        {
+            int x = 0;
+            String query = "SELECT COUNT(1) FROM CreditCardPayment WHERE creditCardID = (SELECT creditCardID FROM CreditCard WHERE customerAccountID = @customerAccountID)";
+            x = db.validateCreditCardTransaction(query, customerAccountID);
+            return x;   
+        }
+
 
     }
 

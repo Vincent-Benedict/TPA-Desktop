@@ -80,5 +80,19 @@ namespace TPA_Desktop.View
 
             pageATMMachine.Content = currentPage;
         }
+
+        private void Button_Transfer_VA(object sender, RoutedEventArgs e)
+        {
+            currentPage = new TransferToVirtualAccountATM();
+
+            pageATMMachine.Content = currentPage;
+        }
+
+        private void Button_CreditCardTransaction(object sender, RoutedEventArgs e)
+        {
+            currentPage = new CreditCardTransactionATM();
+
+            pageATMMachine.Content = currentPage;
+        }
     }
 }

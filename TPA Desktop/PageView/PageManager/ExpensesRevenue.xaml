@@ -1,0 +1,16 @@
+﻿<Page x:Class="TPA_Desktop.PageView.PageManager.ExpensesRevenue"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.PageManager"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="ExpensesRevenue" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="View Expenses Revenue" VerticalAlignment="Top" Height="30" Width="831" FontWeight="Bold" FontSize="18" TextAlignment="Center"/>
+        <Button Content="View Expenses Revenue" HorizontalAlignment="Left" Margin="350,56,0,0" VerticalAlignment="Top" Width="147" Height="55" Click="Button_View"/>
+
+    </Grid>
+</Page>

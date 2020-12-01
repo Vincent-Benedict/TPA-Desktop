@@ -54,5 +54,12 @@ namespace TPA_Desktop.View
 
             pageSAMTeam.Content = currentPage;
         }
+
+        private void Button_Request(object sender, RoutedEventArgs e)
+        {
+            currentPage = new SAMReqeustExpenses();
+
+            pageSAMTeam.Content = currentPage;
+        }
     }
 }

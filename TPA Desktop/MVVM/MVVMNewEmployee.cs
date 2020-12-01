@@ -77,6 +77,11 @@ namespace TPA_Desktop.MVVM
             modelNewEmployee.softDelete(employeeCandidateID);
         }
 
+        public DataTable grabDatabaseDataTable()
+        {
+            return modelNewEmployee.grabDatabaseDataTable(); 
+        }
+
 
 
     }
@@ -124,6 +129,14 @@ namespace TPA_Desktop.MVVM
 
             return listNewEmployee;
         }
+
+        public DataTable grabDatabaseDataTable()
+        {
+            DataTable data = new DataTable();
+            return data = db.viewCustomerAccountData("SELECT employeeCandidateID, employeeCandidateName, employeeCandidateEmail, employeeCandidatePhoneNumber, employeeCandidateStatus FROM EmployeeCandidate WHERE employeeCandidateStatus = 'active'");
+
+        }
+
 
         public List<ModelNewEmployee> grabDatabaseWhereNewEmployee(String NewEmployeeID)
         {

@@ -26,12 +26,17 @@ namespace TPA_Desktop.MVVM
 
         // yang ini yg di binidng
         public ModelEmployee modelEmployee;
-        public List<ModelEmployee> employeeList;
+        public ModelViewEmployeeResign modelEmployeeResign;
+
+        public List<ModelEmployee> employeeList { get; set; }
+        public List<ModelEmployeeResign> employeeResignList { get; set; }
 
         public ModelViewEmployee()
         {
             modelEmployee = new ModelEmployee();
+            modelEmployeeResign = new ModelViewEmployeeResign();
             employeeList = modelEmployee.grabDatabase();
+            employeeResignList = modelEmployeeResign.grabDatabase();
         }
 
 
@@ -47,6 +52,8 @@ namespace TPA_Desktop.MVVM
             employeeList = modelEmployee.grabDatabaseWhereEmployee(employeeID);
             return employeeList;
         }
+
+        
 
 
         public void insertNewStaffEmployee(String employeeName, String employeeEmail, String employeePhoneNumber)
@@ -233,6 +240,41 @@ namespace TPA_Desktop.MVVM
             return x;
         }
 
+        public int validateEmployeeID(String employeeID)
+        {
+            int returnValue = 0;
+            returnValue = modelEmployee.validateEmployeeID(employeeID);
+            return returnValue;
+        }
+
+        public int updateSalary(String employeeID, String employeeSalary)
+        {
+            int returnValue = 0;
+            returnValue = modelEmployee.updateSalary(employeeID, employeeSalary);
+            return returnValue;
+        }
+
+        public String returnEmployeeID(String employeeID)
+        {
+            return modelEmployee.returnEmployeeID(employeeID);
+        }
+
+        public String returnEmployeeName(String employeeID)
+        {
+            return modelEmployee.returnEmployeeName(employeeID);
+        }
+
+        public void deleteEmployee(String employeeID)
+        {
+            modelEmployee.deleteEmployee(employeeID);
+        }
+
+        public DataTable grabDatabaseDataTable()
+        {
+            return modelEmployee.grabDatabaseDataTable();
+
+        }
+
 
     }
 
@@ -280,6 +322,24 @@ namespace TPA_Desktop.MVVM
             return listEmployee;
         }
 
+        public DataTable grabDatabaseDataTable()
+        {
+            DataTable data = db.viewCustomerAccountData("SELECT employeeID, employeeName, employeePassword, employeeEmail, employeePhoneNumber FROM Employee");
+            return data;
+
+        }
+
+
+        public int validateEmployeeID(String employeeID)
+        {
+            int returnValue = 0;
+
+            returnValue = db.validateEmployeeID("SELECT COUNT(1) FROM Employee WHERE employeeID = @employeeID", employeeID);
+
+            return returnValue;
+        }
+
+
         public List<ModelEmployee> grabDatabaseWhereEmployee(String employeeID)
         {
 
@@ -302,6 +362,18 @@ namespace TPA_Desktop.MVVM
             return listEmployee;
         }
 
+        public String returnEmployeeID(String employeeID)
+        {
+            DataTable data = db.viewEmployeeData("SELECT employeeID, employeeName, employeePassword, employeeEmail, employeePhoneNumber FROM Employee WHERE employeeID = @employeeID", employeeID);
+            return data.Rows[0][0].ToString();
+        }
+
+        public String returnEmployeeName(String employeeID)
+        {
+            DataTable data = db.viewEmployeeData("SELECT employeeID, employeeName, employeePassword, employeeEmail, employeePhoneNumber FROM Employee WHERE employeeID = @employeeID", employeeID);
+            return data.Rows[0][1].ToString();
+        }
+
         public void insertEmployee(String employeeID, String employeeName, String employeePassword, String employeeEmail, String employeePhoneNumber)
         {
 
@@ -313,6 +385,14 @@ namespace TPA_Desktop.MVVM
             String x = "UPDATE Employee SET employeeID = @employeeID, employeePassword = @employeePassword WHERE employeeID = @staffEmployeeID";
             int y = 0;
             y = db.updatePosition(x, employeeID, employeePassword, staffEmployeeID);
+            return y;
+        }
+
+        public int updateSalary(String employeeID, String employeeSalary)
+        {
+            String x = "UPDATE Employee SET employeeSalary = @employeeSalary WHERE employeeID = @employeeID";
+            int y = 0;
+            y = db.updateSalary(x, employeeID, Int32.Parse(employeeSalary));
             return y;
         }
 
@@ -358,6 +438,11 @@ namespace TPA_Desktop.MVVM
             int x = 0;
             x = db.selectCount("SELECT Count(employeeID) FROM Employee WHERE employeeID LIKE 'STF%'");
             return x;
+        }
+
+        public void deleteEmployee(String employeeID)
+        {
+            db.deleteEmployee("DELETE FROM Employee WHERE employeeID = @employeeID", employeeID);
         }
 
 

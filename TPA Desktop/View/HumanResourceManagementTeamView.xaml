@@ -15,11 +15,11 @@
 
         <Button Content="Home" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Home"/>
         <Button Content="Employee Data" HorizontalAlignment="Left" Margin="0,133,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Employee_Data"/>
-        <Button Content="Employee Resignation" HorizontalAlignment="Left" Margin="0,187,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
+        <Button Content="Employee Resignation" HorizontalAlignment="Left" Margin="0,187,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Resign"/>
         <Button Content="Position Announcement" HorizontalAlignment="Left" Margin="0,238,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Position"/>
-        <Button Content="Request the Firing" HorizontalAlignment="Left" Margin="0,289,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
-        <Button Content="Salary Raised" HorizontalAlignment="Left" Margin="0,339,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
-        <Button Content="Employee Leaving Permit" HorizontalAlignment="Left" Margin="0,389,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White"/>
+        <Button Content="Request the Firing" HorizontalAlignment="Left" Margin="0,289,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Firing"/>
+        <Button Content="Salary Raised" HorizontalAlignment="Left" Margin="0,339,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Salary_Raised"/>
+        <Button Content="Employee Leaving Permit" HorizontalAlignment="Left" Margin="0,389,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Permit"/>
         <Button Content="Employee Recruitement" HorizontalAlignment="Left" Margin="0,438,0,0" VerticalAlignment="Top" Width="194" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_Employee_Recruitment"/>
 
         <Button Content="LogOut" HorizontalAlignment="Left" Margin="33,557,0,0" VerticalAlignment="Top" Width="126" Height="34" FontWeight="Bold" FontSize="14" Background="#FF00B022" Foreground="White" Click="Button_LogOut"/>

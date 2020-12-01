@@ -78,6 +78,13 @@ namespace TPA_Desktop.MVVM
         //    return returnValue;
         //}
 
+        public int transferVirtualAccount(String virtualAccountID, String amountOfMoney)
+        {
+            int x = virtualAccountModel.updateBalance(virtualAccountID, amountOfMoney);
+
+            return x;
+        }
+
     }
 
 
@@ -88,6 +95,7 @@ namespace TPA_Desktop.MVVM
         public String customerAccountID { get; set; }
         public String virtualAccountName { get; set; }
         public String virtualAccountNumber { get; set; }
+        public String virtualAccountInquiry { get; set; }
 
         DatabaseBuilder db;
 
@@ -104,11 +112,11 @@ namespace TPA_Desktop.MVVM
             virtualAccountList = new List<ModelVirtualAccount>();
 
 
-            DataTable data = db.viewCustomerAccountData("SELECT virtualAccountID, customerAccountID, virtualAccountName, virtualAccountNumber FROM VirtualAccount");
+            DataTable data = db.viewCustomerAccountData("SELECT virtualAccountID, customerAccountID, virtualAccountName, virtualAccountNumber, virtualAccountBalanceInquiry FROM VirtualAccount");
 
             for (int i = 0; i < data.Rows.Count; ++i)
             {
-                virtualAccountList.Add(new ModelVirtualAccount() { virtualAccountID = data.Rows[i][0].ToString(), customerAccountID = data.Rows[i][1].ToString(), virtualAccountName = data.Rows[i][2].ToString(), virtualAccountNumber = data.Rows[i][3].ToString() });
+                virtualAccountList.Add(new ModelVirtualAccount() { virtualAccountID = data.Rows[i][0].ToString(), customerAccountID = data.Rows[i][1].ToString(), virtualAccountName = data.Rows[i][2].ToString(), virtualAccountNumber = data.Rows[i][3].ToString(), virtualAccountInquiry = data.Rows[i][4].ToString() });
             }
 
             return virtualAccountList;
@@ -142,11 +150,22 @@ namespace TPA_Desktop.MVVM
 
         public void insertVirtualAccount(String virtualAccountID, String customerAccountID, String virtualAccountName, String virtualAccountNumber)
         {
-            String query = "INSERT INTO VirtualAccount VALUES (@virtualAccountID, @customerAccountID, @virtualAccountName, @virtualAccountNumber)";
+            String query = "INSERT INTO VirtualAccount (virtualAccountID, customerAccountID, virtualAccountName, virtualAccountNumber) VALUES (@virtualAccountID, @customerAccountID, @virtualAccountName, @virtualAccountNumber)";
 
             db.insertVirtualAccount(query, virtualAccountID, customerAccountID, virtualAccountName, virtualAccountNumber);
 
         }
+
+
+        public int updateBalance(String virtualAccountID, String amountOfMoney)
+        {
+            String query = "UPDATE VirtualAccount SET virtualAccountBalanceInquiry += @amountOfMoney WHERE virtualAccountID = @virtualAccountID";
+
+            int x = db.updateVirtualAccountBalanceInquiry(query, virtualAccountID, Int32.Parse(amountOfMoney));
+
+            return x;
+        }
+
 
 
     }

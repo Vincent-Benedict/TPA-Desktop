@@ -60,5 +60,33 @@ namespace TPA_Desktop.View
 
             pageManager.Content = currentPage;
         }
+
+        private void Button_Expenses(object sender, RoutedEventArgs e)
+        {
+            currentPage = new ExpensesRevenue();
+
+            pageManager.Content = currentPage;
+        }
+
+        private void Button_Resign(object sender, RoutedEventArgs e)
+        {
+            currentPage = new ResignationEmployee();
+
+            pageManager.Content = currentPage;
+        }
+
+        private void Button_Fire(object sender, RoutedEventArgs e)
+        {
+            currentPage = new FireEmployee();
+
+            pageManager.Content = currentPage;
+        }
+
+        private void Button_HumanResource(object sender, RoutedEventArgs e)
+        {
+            currentPage = new ViewHumanResource();
+
+            pageManager.Content = currentPage;
+        }
     }
 }

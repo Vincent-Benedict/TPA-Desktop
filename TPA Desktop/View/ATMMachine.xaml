@@ -20,8 +20,8 @@
         <Button Content="Withdraw Money" HorizontalAlignment="Left" Margin="0,218,0,0" VerticalAlignment="Top" Width="194" Height="31" FontWeight="Bold" FontSize="16" Background="#FF0071DC" Foreground="White" Click="Button_Withdrawl"/>
         <Button Content="Payments" HorizontalAlignment="Left" Margin="0,270,0,0" VerticalAlignment="Top" Width="194" Height="31" FontWeight="Bold" FontSize="16" Background="#FF0071DC" Foreground="White" Click="Button_Payments"/>
         <Button Content="Check Transaction" HorizontalAlignment="Left" Margin="0,324,0,0" VerticalAlignment="Top" Width="194" Height="31" FontWeight="Bold" FontSize="16" Background="#FF0071DC" Foreground="White" Click="Button_Check_Transation"/>
-        <Button Content="Check Credit Card Transaction" HorizontalAlignment="Left" Margin="0,376,0,0" VerticalAlignment="Top" Width="194" Height="36" FontWeight="Bold" Background="#FF0071DC" Foreground="White"/>
-        <Button Content="Transfer to Virtual Account" HorizontalAlignment="Left" Margin="0,431,0,0" VerticalAlignment="Top" Width="194" Height="36" FontWeight="Bold" Background="#FF0071DC" Foreground="White"/>
+        <Button Content="Check Credit Card Transaction" HorizontalAlignment="Left" Margin="0,376,0,0" VerticalAlignment="Top" Width="194" Height="36" FontWeight="Bold" Background="#FF0071DC" Foreground="White" Click="Button_CreditCardTransaction"/>
+        <Button Content="Transfer to Virtual Account" HorizontalAlignment="Left" Margin="0,431,0,0" VerticalAlignment="Top" Width="194" Height="36" FontWeight="Bold" Background="#FF0071DC" Foreground="White" Click="Button_Transfer_VA"/>
         <Button Content="LogOut" HorizontalAlignment="Left" Margin="50,541,0,0" VerticalAlignment="Top" Width="83" Height="36" FontWeight="Bold" Background="#FF0071DC" Foreground="White" Click="Button_LogOut"/>
 
         <!--Frame View-->

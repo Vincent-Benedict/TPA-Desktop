@@ -1,0 +1,131 @@
+﻿<Page x:Class="TPA_Desktop.PageView.HumanResourceManagementTeam.HRMManageSalary"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.HumanResourceManagementTeam"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="HRMManageSalary" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Manage Salary" VerticalAlignment="Top" Height="43" Width="831" FontWeight="Bold" FontSize="24" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="46,87,0,0" TextWrapping="Wrap" Text="Input Employee ID" VerticalAlignment="Top" Height="26" Width="116" FontWeight="Bold"/>
+        <TextBox Name="txtEmployeeID" HorizontalAlignment="Left" Height="23" Margin="42,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
+        <TextBlock HorizontalAlignment="Left" Margin="42,163,0,0" TextWrapping="Wrap" Text="Input New Salary" VerticalAlignment="Top" Height="28" Width="143" FontWeight="Bold" FontSize="14"/>
+        <TextBox Name="txtNewSalary" HorizontalAlignment="Left" Height="23" Margin="46,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
+        <Button Content="Request" HorizontalAlignment="Left" Margin="69,241,0,0" VerticalAlignment="Top" Width="93" Height="26" Click="Button_Request"/>
+        <TextBlock HorizontalAlignment="Left" Margin="42,346,0,0" TextWrapping="Wrap" Text="Input Employee ID for Update" VerticalAlignment="Top" Height="41" Width="161" FontWeight="Bold"/>
+        <TextBox Name="txtEmployeeID2" HorizontalAlignment="Left" Height="23" Margin="42,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="69,453,0,0" VerticalAlignment="Top" Width="93" Height="26" Click="Button_Update"/>
+
+        <DataGrid Name="DGEmployee" Margin="209,58,10.2,291.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="employeeID"
+                Binding="{Binding employeeID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="employeeName"
+                Binding="{Binding employeeName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="employeePhoneNumber"
+                Binding="{Binding employeePhoneNumber, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="employeeSalary"
+                Binding="{Binding employeeSalary, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+
+        <DataGrid Name="DGSalaryRequest" Margin="209,346,10.2,10.4" AutoGenerateColumns="False">
+
+
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="employeeID"
+                Binding="{Binding employeeID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="employeeUpdatedMoney"
+                Binding="{Binding employeeUpdatedMoney, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="requestEmployeeSalaryStatus"
+                Binding="{Binding requestEmployeeSalaryStatus, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+
+
+
+
+
+
+
+
+        </DataGrid>
+        
+        
+        
+
+    </Grid>
+</Page>

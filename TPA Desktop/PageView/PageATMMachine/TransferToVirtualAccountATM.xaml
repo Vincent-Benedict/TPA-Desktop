@@ -1,0 +1,100 @@
+﻿<Page x:Class="TPA_Desktop.PageView.PageATMMachine.TransferToVirtualAccountATM"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.PageATMMachine"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="TransferToVirtualAccountATM" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Transfer To Virtual Account" VerticalAlignment="Top" Height="36" Width="831" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,89,0,0" TextWrapping="Wrap" Text="Input Customer ID" VerticalAlignment="Top" Height="29" Width="163" FontSize="18" FontWeight="Bold"/>
+
+        <TextBox Name="txtCustomerID" HorizontalAlignment="Left" Height="32" Margin="58,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+        <Button Content="Verify" HorizontalAlignment="Left" Margin="91,178,0,0" VerticalAlignment="Top" Width="116" Height="32" Click="Button_Verify"/>
+
+
+
+
+        <TextBlock Name="hidden1" HorizontalAlignment="Left" Margin="58,243,0,0" TextWrapping="Wrap" Text="Input Virtual Account ID" VerticalAlignment="Top" Height="26" Width="177" FontSize="14" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox Name="txtVirtualAccountID" HorizontalAlignment="Left" Height="23" Margin="58,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Visibility="Hidden"/>
+        <TextBlock Name="hidden2" HorizontalAlignment="Left" Margin="58,335,0,0" TextWrapping="Wrap" Text="Input Amount of Money Transfer" VerticalAlignment="Top" Width="194" Height="27" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox Name="txtAmountOfMoney" HorizontalAlignment="Left" Height="23" Margin="58,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Visibility="Hidden"/>
+        <Button Name="hidden3" Content="Transfer" HorizontalAlignment="Left" Margin="91,439,0,0" VerticalAlignment="Top" Width="98" Height="30" Click="Button_Transfer" Visibility="Hidden"/>
+
+
+
+
+
+
+
+
+        <DataGrid Name="DGVA" Margin="271,67,10.2,10.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                Header="virtualAccountID"
+                Binding="{Binding virtualAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="customerAccountID"
+                Binding="{Binding customerAccountID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="virtualAccountName"
+                Binding="{Binding virtualAccountName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="virtualAccountNumber"
+                Binding="{Binding virtualAccountNumber, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn
+                Header="virtualAccountInquiry"
+                Binding="{Binding virtualAccountInquiry, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        
+
+
+    </Grid>
+
+</Page>

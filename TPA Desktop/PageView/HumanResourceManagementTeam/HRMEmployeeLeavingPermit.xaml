@@ -1,0 +1,39 @@
+﻿<Page x:Class="TPA_Desktop.PageView.HumanResourceManagementTeam.HRMEmployeeLeavingPermit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TPA_Desktop.PageView.HumanResourceManagementTeam"
+      mc:Ignorable="d" 
+      d:DesignHeight="610.4" d:DesignWidth="851.2"
+      Title="HRMEmployeeLeavingPermit" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Employee Leaving Permit" VerticalAlignment="Top" Height="36" Width="831" FontSize="24" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="36,102,0,0" TextWrapping="Wrap" Text="Insert Number You Want to Approved" VerticalAlignment="Top" Height="49" Width="222" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtNumber" HorizontalAlignment="Left" Height="35" Margin="36,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222"/>
+        <Button Content="Approved" HorizontalAlignment="Left" Margin="36,213,0,0" VerticalAlignment="Top" Width="85" Height="34" Click="Button_Approved"/>
+        <Button Content="Reject" HorizontalAlignment="Left" Margin="155,213,0,0" VerticalAlignment="Top" Width="103" Height="34" Click="Button_Reject"/>
+        
+        
+        <DataGrid Name="DGEmployeeLeavingPermit" Margin="278,70,10.2,10.4" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="leavingPermitNumber" Binding="{Binding leavingPermitNumber, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+                <DataGridTextColumn Header="employeeID" Binding="{Binding employeeID, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+                <DataGridTextColumn Header="employeeName" Binding="{Binding employeeName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+                <DataGridTextColumn Header="permitReason" Binding="{Binding permitReason, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+                <DataGridTextColumn Header="permitStatus" Binding="{Binding permitStatus, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged,ValidatesOnExceptions=True, NotifyOnValidationError=True}"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+
+
+
+
+        </DataGrid>
+        
+
+
+
+    </Grid>
+</Page>

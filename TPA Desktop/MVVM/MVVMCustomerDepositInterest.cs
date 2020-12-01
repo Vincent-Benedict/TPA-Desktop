@@ -42,6 +42,11 @@ namespace TPA_Desktop.MVVM
             return customerDepositInterestBills;
         }
 
+        public DataTable grabDatabaseDataTable()
+        {
+            return modelCustomerDepositInterest.grabDatabaseDataTable();
+        }
+
     }
 
 
@@ -83,6 +88,12 @@ namespace TPA_Desktop.MVVM
 
             return loans;
 
+        }
+
+        public DataTable grabDatabaseDataTable()
+        {
+            DataTable data = db.viewCustomerAccountData("SELECT customerDepositInterestID, customerID, customerDepositInterestPercent from CustomerDepositInterest");
+            return data;
         }
 
 

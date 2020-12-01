@@ -14,10 +14,10 @@
 
         <Button Content="Home" HorizontalAlignment="Left" Margin="0,77,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White" Click="Button_Home"/>
         <Button Content="View Transaction" HorizontalAlignment="Left" Margin="0,135,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White" Click="Button_View_Transaction"/>
-        <Button Content="View Expenses Revenue" HorizontalAlignment="Left" Margin="0,193,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White"/>
-        <Button Content="View Human Resource" HorizontalAlignment="Left" Margin="0,250,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White"/>
-        <Button Content="Manage Resignation" HorizontalAlignment="Left" Margin="0,307,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White"/>
-        <Button Content="Fire Employee" HorizontalAlignment="Left" Margin="0,368,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White"/>
+        <Button Content="View Expenses Revenue" HorizontalAlignment="Left" Margin="0,193,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White" Click="Button_Expenses"/>
+        <Button Content="View Human Resource" HorizontalAlignment="Left" Margin="0,250,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White" Click="Button_HumanResource"/>
+        <Button Content="Manage Resignation" HorizontalAlignment="Left" Margin="0,307,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White" Click="Button_Resign"/>
+        <Button Content="Fire Employee" HorizontalAlignment="Left" Margin="0,368,0,0" VerticalAlignment="Top" Width="194" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White" Click="Button_Fire"/>
         
         <Button Content="LogOut" HorizontalAlignment="Left" Margin="36,558,0,0" VerticalAlignment="Top" Width="122" Height="40" FontWeight="Bold" FontSize="14" Background="#FF9E00A5" Foreground="White" Click="Button_LogOut"/>
 
